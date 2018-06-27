@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-jun-2017 19:51:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Control" table="control" catalog="cincotours" optimistic-lock="version">
+        <id name="idCon" type="java.lang.Integer">
+            <column name="id_con" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="programacion" class="entity.Programacion" fetch="select">
+            <column name="id_pro" not-null="true" />
+        </many-to-one>
+        <many-to-one name="usuario" class="entity.Usuario" fetch="select">
+            <column name="id_usu" not-null="true" />
+        </many-to-one>
+        <property name="mingCont" type="big_decimal">
+            <column name="ming_cont" precision="10" not-null="true" />
+        </property>
+        <property name="megrCont" type="big_decimal">
+            <column name="megr_cont" precision="10" not-null="true" />
+        </property>
+        <property name="totaCon" type="big_decimal">
+            <column name="tota_con" precision="10" not-null="true" />
+        </property>
+        <set name="movimientoDet" cascade="all">
+            <key>
+                <column name="id_con" not-null="true" />
+            </key>
+            <one-to-many class="entity.Movimiento" />
+        </set>
+    </class>
+</hibernate-mapping>

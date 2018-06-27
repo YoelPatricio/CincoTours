@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-jun-2017 19:51:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Horario" table="horario" catalog="cincotours" optimistic-lock="version">
+        <id name="idHor" type="java.lang.Integer">
+            <column name="id_hor" />
+            <generator class="identity" />
+        </id>
+        <property name="saliHor" type="string">
+            <column name="sali_hor" length="10" not-null="true" />
+        </property>
+        <property name="llegHor" type="string">
+            <column name="lleg_hor" length="10" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="is_deleted" not-null="true" />
+        </property>
+        <set name="programacions" table="programacion" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_hor" not-null="true" />
+            </key>
+            <one-to-many class="entity.Programacion" />
+        </set>
+    </class>
+</hibernate-mapping>

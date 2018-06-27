@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-jun-2017 19:51:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Empleado" table="empleado" catalog="cincotours" optimistic-lock="version">
+        <id name="idEmp" type="java.lang.Integer">
+            <column name="id_emp" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="rol" class="entity.Rol" fetch="select">
+            <column name="id_rol" not-null="true" />
+        </many-to-one>
+        <property name="dniEmp" type="string">
+            <column name="dni_emp" length="8" not-null="true" />
+        </property>
+        <property name="nombEmp" type="string">
+            <column name="nomb_emp" length="100" not-null="true" />
+        </property>
+        <property name="celuEmp" type="string">
+            <column name="celu_emp" length="10" not-null="true" />
+        </property>
+        <property name="direEmp" type="string">
+            <column name="dire_emp" length="100" not-null="true" />
+        </property>
+        <property name="nbreEmp" type="string">
+            <column name="nbre_emp" length="20" />
+        </property>
+        <property name="estaEmp" type="int">
+            <column name="esta_emp"/>
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="is_deleted" not-null="true" />
+        </property>
+        <set name="programacionsForIdEpi" table="programacion" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_epi" not-null="true" />
+            </key>
+            <one-to-many class="entity.Programacion" />
+        </set>
+        <set name="programacionsForIdEco" table="programacion" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_eco" not-null="true" />
+            </key>
+            <one-to-many class="entity.Programacion" />
+        </set>
+        <set name="usuarios" table="usuario" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_emp" not-null="true" />
+            </key>
+            <one-to-many class="entity.Usuario" />
+        </set>
+    </class>
+</hibernate-mapping>

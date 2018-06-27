@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1" pageWidth="439" pageHeight="212" columnWidth="411" leftMargin="14" rightMargin="14" topMargin="14" bottomMargin="14" uuid="3494977a-5b05-45cf-be97-1e67d0527969">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="numero" class="java.lang.String"/>
+	<parameter name="ruc" class="java.lang.String"/>
+	<parameter name="dni" class="java.lang.String"/>
+	<parameter name="empresa" class="java.lang.String"/>
+	<parameter name="pasajero" class="java.lang.String"/>
+	<parameter name="origen" class="java.lang.String"/>
+	<parameter name="destino" class="java.lang.String"/>
+	<parameter name="expedicion" class="java.lang.String"/>
+	<parameter name="viaje" class="java.lang.String"/>
+	<parameter name="pasaje" class="java.lang.String"/>
+	<parameter name="adicional" class="java.lang.String"/>
+	<parameter name="total" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="184" splitType="Stretch">
+			<rectangle radius="10">
+				<reportElement x="293" y="1" width="118" height="183" forecolor="#0066FF" uuid="186e4844-19c5-42d3-ae2d-dabb60e86bcb"/>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement x="299" y="138" width="106" height="20" forecolor="#0066FF" uuid="ab906dcb-07e1-4a82-87dc-40836ee442f7"/>
+			</rectangle>
+			<rectangle radius="10">
+				<reportElement x="0" y="0" width="289" height="184" forecolor="#0066FF" uuid="c3eb5f71-9445-4ac4-840e-d9e8c3b0f2a1"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="128" width="289" height="14" forecolor="#0066FF" uuid="87bbc3f5-9522-4bf1-a6f8-016404c1876e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="-1" width="221" height="18" forecolor="#0066FF" uuid="ec3c9a6b-b927-4e66-bc41-0da499331695"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[EMPRESA DE TRANSPORTES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="221" height="16" forecolor="#0066FF" uuid="b5369b12-268d-41f7-8f00-bd5b08242830"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CINCO TOURS S.A.]]></text>
+			</staticText>
+			<rectangle radius="10">
+				<reportElement x="169" y="0" width="120" height="45" forecolor="#0066FF" uuid="d745fa3a-942c-4f8b-8356-af1dd9571da2"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="169" y="14" width="120" height="16" forecolor="#0066FF" backcolor="#66CCFF" uuid="e0804ece-2086-4bcf-af78-76a37b094b10"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="169" y="1" width="120" height="13" uuid="92c3262c-26a7-43c7-af3d-be3f559089fb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[R.U.C. 20542142198]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="169" y="14" width="120" height="16" uuid="7c2c7acc-1439-4e7e-b168-76a33fbc1a6a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[BOLETO DE VIAJE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="30" width="15" height="15" uuid="fe79ef1c-476c-40af-ab03-7c6619a81b7e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[N°]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="26" width="153" height="10" uuid="a4edf29f-22f6-4e4a-aa29-50b9c82a170b"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Jr. Arequipa N° 10 U.V. Arequipa (Frente a la fiscalia)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="33" width="153" height="10" uuid="162b8670-00a9-4457-9241-413db75ab47e"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Barranca - Barranca - Lima - Tel: 235-9179]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="16" y="40" width="153" height="10" uuid="b5b13c4f-ff58-4e42-b038-3cce5ec5138b"/>
+				<textElement textAlignment="Center">
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Of. Lima: Av. Grau N° 250 - La Victoria - Lima - Tel: 3310124]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="50" width="289" height="20" forecolor="#0066FF" uuid="377751f7-3bee-4a76-91e2-d52061ce563b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="70" width="289" height="20" forecolor="#0066FF" uuid="995c3bff-f28d-4e39-874a-024babb3822f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="2" y="94" width="65" height="13" uuid="1d7d60b3-1794-489c-805a-11091a53c248"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lugar de Origen:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="94" width="70" height="13" uuid="49ef914f-1be8-4a31-8b8d-60a1a084c926"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lugar de Destino:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="110" width="83" height="13" uuid="a1b96516-15a9-4e26-a66d-21d4aefdf950"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Expedición:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="147" y="110" width="62" height="13" uuid="ab6174b5-2178-4d5c-8c52-bf9bcb670674"/>
+				<textElement>
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Viaje:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="84" y="50" width="1" height="40" forecolor="#0066FF" uuid="cc8d58fe-970a-4bda-8e89-7b4101064b9a"/>
+			</line>
+			<staticText>
+				<reportElement x="2" y="50" width="20" height="20" uuid="4115def9-a769-4aec-a182-255b181fddcc"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[R.U.C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="70" width="20" height="20" uuid="e0d8f340-a3d4-48f1-bcd1-a90dea27fd34"/>
+				<textElement verticalAlignment="Middle">
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[D.N.I]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="50" width="49" height="20" uuid="bd670b91-face-4217-9341-56eb52251c6e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RAZÓN SOCIAL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="84" y="70" width="37" height="20" uuid="e88d5aae-ddc4-432b-a40b-009242e15b1d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PASAJERO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="128" width="93" height="14" uuid="a03599dd-3844-4c4e-8cb7-84d2e03e7d0a"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PASAJE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="128" width="96" height="14" uuid="9879192d-9e1b-4a4a-9fd8-d23717fa8a74"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARGA ADICIONAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="128" width="98" height="14" uuid="86bdf7d3-0e87-48d3-8443-691840a33d26"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="142" width="289" height="23" forecolor="#0066FF" uuid="96262e47-512b-4d76-9e44-c24f9a361d68"/>
+			</rectangle>
+			<line>
+				<reportElement x="87" y="128" width="1" height="37" forecolor="#0066FF" uuid="ea6d1bfb-ac69-4c8b-811f-f9601b56e688"/>
+			</line>
+			<line>
+				<reportElement x="191" y="128" width="1" height="37" forecolor="#0066FF" uuid="4fd7bf6c-8bb4-4383-a369-aa413cfc887c"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="164" width="289" height="20" uuid="0f5b21ae-a4e9-427b-b4be-347a2b98e456"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PASAJERO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="293" y="1" width="118" height="16" forecolor="#0066FF" uuid="bd61ba60-1687-4728-a38a-5800124a4b72"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<text><![CDATA[EMPRESA DE TRANSPORTES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="293" y="10" width="118" height="16" forecolor="#0066FF" uuid="26e3351d-3b79-426d-9bbf-79f52e1ec1f2"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CINCO TOURS S.A.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="313" y="30" width="15" height="15" uuid="cea4c51f-6f71-431b-b68b-34f51c736ab4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[N°]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="50" width="66" height="13" uuid="e4e5bd92-c9af-4ad6-8eed-3349740fa111"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lugar de Origen:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="62" width="66" height="13" uuid="92c8a7d2-e553-4bcc-8432-d715bf856b98"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lugar de Destino:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="74" width="66" height="13" uuid="d1319bc4-4a63-43ab-91e9-e4fcf2546937"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Exped:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="86" width="66" height="13" uuid="343c55d8-df41-4003-9ae6-45970b1a7edb"/>
+				<textElement>
+					<font size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Viaje:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="106" width="61" height="14" uuid="f29c2091-2e5d-452d-aca7-1bed832d2ee9"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PASAJE : S/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="120" width="61" height="14" uuid="02f4f7d8-b12c-44d3-b72d-20f088d42f47"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[C. ADIC. : S/]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="299" y="138" width="53" height="20" uuid="53abf722-4d89-4343-bfa2-ceabbe0a003c"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL : S/]]></text>
+			</staticText>
+			<line>
+				<reportElement x="295" y="134" width="100" height="1" forecolor="#0066FF" uuid="6f2a0ee4-bc0b-490a-ab1e-79ec7ad58d02"/>
+			</line>
+			<staticText>
+				<reportElement x="295" y="161" width="116" height="20" uuid="a1976770-9a80-401f-a1d0-226acf833a21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CONTROL DE EMPRESA]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="30" width="89" height="15" uuid="57ed2053-a8a8-4c28-ba8a-a7af715ca8c2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numero}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="22" y="50" width="62" height="20" uuid="16167eb6-0fb7-4a4b-94b5-c1d068dd58da"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{ruc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="21" y="70" width="63" height="20" uuid="ecda5722-83ba-4427-8900-ca370023b629"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{dni}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="134" y="50" width="155" height="20" uuid="8a76951e-bf90-4a14-9dbe-bd682f5f9bcf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="70" width="168" height="20" uuid="ff90f5ef-3f51-4dea-be4a-f7ae3187b67d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{pasajero}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="72" y="94" width="75" height="13" uuid="3a71f301-a8ff-4a5e-be9b-bd9377cc2fa2"/>
+				<textElement verticalAlignment="Top">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{origen}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="94" width="67" height="13" uuid="16460e3b-8ebf-4eee-8f62-92f51ce5c116"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{destino}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="84" y="110" width="63" height="13" uuid="89a62f13-4719-473a-be17-9ba176325346"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{expedicion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="209" y="110" width="79" height="13" uuid="b7e9a55d-c01b-4f34-ba9f-54ad4d297b76"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{viaje}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="142" width="87" height="23" uuid="d09f7469-e6cb-45c3-aa1a-ef6f5e82425a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["S/ "+$P{pasaje}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="142" width="103" height="23" uuid="0ab536d0-4119-4252-9824-508db97ebe6a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["S/ "+$P{adicional}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="192" y="142" width="96" height="23" uuid="d0d2d8be-23a4-4065-ac2a-8c2083131857"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["S/ "+$P{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="358" y="106" width="53" height="14" uuid="93585d8b-d289-4508-b36e-a3310411dd0c"/>
+				<textFieldExpression><![CDATA[$P{pasaje}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="358" y="120" width="53" height="14" uuid="a15f6a41-57d1-430f-988a-573729b0a185"/>
+				<textFieldExpression><![CDATA[$P{adicional}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="354" y="138" width="51" height="20" uuid="4a02ff9f-29e2-4da1-9e8d-2dcf6484fc7c"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="50" width="50" height="13" uuid="5bf384a6-2781-473a-a348-a45fafc41812"/>
+				<textElement verticalAlignment="Top">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{origen}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="63" width="50" height="11" uuid="26c8d128-6481-40bf-bb17-f193615c926f"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{destino}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="73" width="50" height="13" uuid="dfb05e07-8244-46f5-afc9-5da0721825c2"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{expedicion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="86" width="50" height="13" uuid="d42c91c8-b3e1-421e-8a50-a265a0366fbb"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{viaje}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="328" y="30" width="83" height="15" uuid="b07ec0a4-ce2d-413e-a178-90335111436e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{numero}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

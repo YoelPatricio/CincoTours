@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-jun-2017 19:51:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Movimiento" table="movimiento" catalog="cincotours" optimistic-lock="version">
+        <id name="idMov" type="java.lang.Integer">
+            <column name="id_mov" />
+            <generator class="identity" />
+        </id>
+        <!--<many-to-one name="control" class="entity.Control" fetch="select">
+            <column name="id_con" not-null="true" />
+        </many-to-one>-->
+        <property name="tipoMov" type="string">
+            <column name="tipo_mov" length="50" not-null="true" />
+        </property>
+        <property name="nombMov" type="string">
+            <column name="nomb_mov" length="50" not-null="true" />
+        </property>
+        <property name="montMov" type="big_decimal">
+            <column name="mont_mov" precision="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

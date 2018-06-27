@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="cincotours"/>
+  <table-filter match-name="ruta"/>
+  <table-filter match-name="encomienda"/>
+  <table-filter match-name="boleto"/>
+  <table-filter match-name="horario"/>
+  <table-filter match-name="encomiendadetalle"/>
+  <table-filter match-name="programacion"/>
+  <table-filter match-name="empleado"/>
+  <table-filter match-name="control"/>
+  <table-filter match-name="parametros"/>
+  <table-filter match-name="movimiento"/>
+  <table-filter match-name="rol"/>
+  <table-filter match-name="permiso"/>
+  <table-filter match-name="bus"/>
+  <table-filter match-name="usuario"/>
+</hibernate-reverse-engineering>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-jun-2017 19:51:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Bus" table="bus" catalog="cincotours" optimistic-lock="version">
+        <id name="idBus" type="java.lang.Integer">
+            <column name="id_bus" />
+            <generator class="identity" />
+        </id>
+        <property name="numeBus" type="string">
+            <column name="nume_bus" length="10" not-null="true" />
+        </property>
+        <property name="placBus" type="string">
+            <column name="plac_bus" length="10" not-null="true" />
+        </property>
+        <property name="kmetBus" type="string">
+            <column name="kmet_bus" length="10" not-null="true" />
+        </property>
+        <property name="marcBus" type="string">
+            <column name="marc_bus" length="100" not-null="true" />
+        </property>
+        <property name="modeBus" type="string">
+            <column name="mode_bus" length="100" not-null="true" />
+        </property>
+        <property name="nasiBus" type="int">
+            <column name="nasi_bus" not-null="true" />
+        </property>
+        <property name="estaBus" type="int">
+            <column name="esta_bus"/>
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="is_deleted" not-null="true" />
+        </property>
+        <set name="programacions" table="programacion" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_bus" not-null="true" />
+            </key>
+            <one-to-many class="entity.Programacion" />
+        </set>
+    </class>
+</hibernate-mapping>

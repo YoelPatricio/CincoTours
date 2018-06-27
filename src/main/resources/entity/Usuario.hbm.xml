@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-jun-2017 19:51:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Usuario" table="usuario" catalog="cincotours" optimistic-lock="version">
+        <id name="idUsu" type="java.lang.Integer">
+            <column name="id_usu" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="empleado" class="entity.Empleado" fetch="select">
+            <column name="id_emp" not-null="true" />
+        </many-to-one>
+        <property name="logiUsu" type="string">
+            <column name="logi_usu" length="50" not-null="true" />
+        </property>
+        <property name="passUsu" type="string">
+            <column name="pass_usu" length="50" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="is_deleted" not-null="true" />
+        </property>
+        <set name="controls" table="control" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_usu" not-null="true" />
+            </key>
+            <one-to-many class="entity.Control" />
+        </set>
+        <set name="boletos" table="boleto" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_usu" not-null="true" />
+            </key>
+            <one-to-many class="entity.Boleto" />
+        </set>
+    </class>
+</hibernate-mapping>

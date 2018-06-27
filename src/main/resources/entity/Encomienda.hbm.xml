@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-jun-2017 19:51:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Encomienda" table="encomienda" catalog="cincotours" optimistic-lock="version">
+        <id name="idEnc" type="java.lang.Integer">
+            <column name="id_enc" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="programacion" class="entity.Programacion" fetch="select">
+            <column name="id_pro" not-null="true" />
+        </many-to-one>
+        <many-to-one name="ruta" class="entity.Ruta" fetch="select">
+            <column name="id_rut" not-null="true" />
+        </many-to-one>
+        <property name="fechEnc" type="date">
+            <column name="fech_enc" length="10" not-null="true" />
+        </property>
+        <property name="dremEnc" type="string">
+            <column name="drem_enc" length="8" not-null="true" />
+        </property>
+        <property name="nremEnc" type="string">
+            <column name="nrem_enc" length="100" not-null="true" />
+        </property>
+        <property name="dconEnc" type="string">
+            <column name="dcon_enc" length="8" not-null="true" />
+        </property>
+        <property name="nconEnc" type="string">
+            <column name="ncon_enc" length="100" not-null="true" />
+        </property>
+        <property name="totaEnc" type="big_decimal">
+            <column name="tota_enc" precision="10" not-null="true" />
+        </property>
+        <property name="estaEnc" type="int">
+            <column name="esta_enc" not-null="true" />
+        </property>
+        <set name="detalle" cascade="all">
+            <key>
+                <column name="id_enc" not-null="true" />
+            </key>
+            <one-to-many class="entity.Encomiendadetalle" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/cincotours?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <mapping resource="entity/Rol.hbm.xml"/>
+    <mapping resource="entity/Bus.hbm.xml"/>
+    <mapping resource="entity/Parametros.hbm.xml"/>
+    <mapping resource="entity/Control.hbm.xml"/>
+    <mapping resource="entity/Encomienda.hbm.xml"/>
+    <mapping resource="entity/Horario.hbm.xml"/>
+    <mapping resource="entity/Programacion.hbm.xml"/>
+    <mapping resource="entity/Permiso.hbm.xml"/>
+    <mapping resource="entity/Movimiento.hbm.xml"/>
+    <mapping resource="entity/Encomiendadetalle.hbm.xml"/>
+    <mapping resource="entity/Usuario.hbm.xml"/>
+    <mapping resource="entity/Boleto.hbm.xml"/>
+    <mapping resource="entity/Empleado.hbm.xml"/>
+    <mapping resource="entity/Ruta.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

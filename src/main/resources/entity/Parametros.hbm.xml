@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-jun-2017 19:51:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Parametros" table="parametros" catalog="cincotours" optimistic-lock="version">
+        <id name="idParam" type="java.lang.Integer">
+            <column name="id_param" />
+            <generator class="identity" />
+        </id>
+        <property name="codeParam" type="string">
+            <column name="code_param" length="100" not-null="true" />
+        </property>
+        <property name="nombParam" type="string">
+            <column name="nomb_param" length="100" not-null="true" />
+        </property>
+        <property name="valorParam" type="string">
+            <column name="valor_param" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-jun-2017 19:51:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Programacion" table="programacion" catalog="cincotours" optimistic-lock="version">
+        <id name="idPro" type="java.lang.Integer">
+            <column name="id_pro" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="bus" class="entity.Bus" fetch="select">
+            <column name="id_bus" not-null="true" />
+        </many-to-one>
+        <many-to-one name="empleadoByIdEpi" class="entity.Empleado" fetch="select">
+            <column name="id_epi" not-null="true" />
+        </many-to-one>
+        <many-to-one name="empleadoByIdEco" class="entity.Empleado" fetch="select">
+            <column name="id_eco" not-null="true" />
+        </many-to-one>
+        <many-to-one name="horario" class="entity.Horario" fetch="select">
+            <column name="id_hor" not-null="true" />
+        </many-to-one>
+        <many-to-one name="ruta" class="entity.Ruta" fetch="select">
+            <column name="id_rut" not-null="true" />
+        </many-to-one>
+        <property name="fechPro" type="date">
+            <column name="fech_pro" length="10" not-null="true" />
+        </property>
+        <property name="asidPro" type="int">
+            <column name="asid_pro"/>
+        </property>
+        <property name="hllegaPro" type="string">
+            <column name="hllega_pro" length="10"/>
+        </property>
+        <property name="estaPro" type="int">
+            <column name="esta_pro" not-null="true" />
+        </property>
+        <set name="boletos" table="boleto" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_pro" not-null="true" />
+            </key>
+            <one-to-many class="entity.Boleto" />
+        </set>
+        <set name="encomiendas" table="encomienda" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_pro" not-null="true" />
+            </key>
+            <one-to-many class="entity.Encomienda" />
+        </set>
+        <set name="controls" table="control" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_pro" not-null="true" />
+            </key>
+            <one-to-many class="entity.Control" />
+        </set>
+    </class>
+</hibernate-mapping>

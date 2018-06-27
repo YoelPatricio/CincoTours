@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-jun-2017 19:51:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Rol" table="rol" catalog="cincotours" optimistic-lock="version">
+        <id name="idRol" type="java.lang.Integer">
+            <column name="id_rol" />
+            <generator class="identity" />
+        </id>
+        <property name="nombRol" type="string">
+            <column name="nomb_rol" length="50" not-null="true" />
+        </property>
+        <property name="descRol" type="string">
+            <column name="desc_rol" length="100" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="is_deleted" not-null="true" />
+        </property>
+        <set name="empleados" table="empleado" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_rol" not-null="true" />
+            </key>
+            <one-to-many class="entity.Empleado" />
+        </set>
+        <set name="permiso" cascade="all">
+            <key>
+                <column name="id_rol" not-null="true" />
+            </key>
+            <one-to-many class="entity.Permiso" />
+        </set>
+    </class>
+</hibernate-mapping>

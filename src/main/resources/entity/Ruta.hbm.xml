@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-jun-2017 19:51:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Ruta" table="ruta" catalog="cincotours" optimistic-lock="version">
+        <id name="idRut" type="java.lang.Integer">
+            <column name="id_rut" />
+            <generator class="identity" />
+        </id>
+        <property name="nombRut" type="string">
+            <column name="nomb_rut" length="50" not-null="true" />
+        </property>
+        <property name="pnorRut" type="big_decimal">
+            <column name="pnor_rut" precision="10" not-null="true" />
+        </property>
+        <property name="pferRut" type="big_decimal">
+            <column name="pfer_rut" precision="10" not-null="true" />
+        </property>
+        <property name="norsurRut" type="int">
+            <column name="norsur_rut" not-null="true" />
+        </property>
+        <property name="isDeleted" type="int">
+            <column name="is_deleted" not-null="true" />
+        </property>
+        <set name="boletos" table="boleto" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_rut" not-null="true" />
+            </key>
+            <one-to-many class="entity.Boleto" />
+        </set>
+        <set name="programacions" table="programacion" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_rut" not-null="true" />
+            </key>
+            <one-to-many class="entity.Programacion" />
+        </set>
+    </class>
+</hibernate-mapping>

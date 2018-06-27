@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-jun-2017 19:51:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Boleto" table="boleto" catalog="cincotours" optimistic-lock="version">
+        <id name="idBol" type="java.lang.Integer">
+            <column name="id_bol" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="programacion" class="entity.Programacion" fetch="select">
+            <column name="id_pro" not-null="true" />
+        </many-to-one>
+        <many-to-one name="ruta" class="entity.Ruta" fetch="select">
+            <column name="id_rut" not-null="true" />
+        </many-to-one>
+        <many-to-one name="usuario" class="entity.Usuario" fetch="select">
+            <column name="id_usu" not-null="true" />
+        </many-to-one>
+        <property name="rucEmpr" type="string">
+            <column name="ruc_empr" length="11" not-null="true" />
+        </property>
+        <property name="nombEmpr" type="string">
+            <column name="nomb_empr" length="100" />
+        </property>
+        <property name="dniCli" type="string">
+            <column name="dni_cli" length="8" not-null="true" />
+        </property>
+        <property name="nombCli" type="string">
+            <column name="nomb_cli" length="100" not-null="true" />
+        </property>
+        <property name="precBol" type="big_decimal">
+            <column name="prec_bol" precision="10" not-null="true" />
+        </property>
+        <property name="acarBol" type="big_decimal">
+            <column name="acar_bol" precision="10" not-null="true" />
+        </property>
+        <property name="totaBol" type="big_decimal">
+            <column name="tota_bol" precision="10" not-null="true" />
+        </property>
+        <property name="fcomBol" type="date">
+            <column name="fcom_bol" length="10" not-null="true" />
+        </property>
+        <property name="anumBol" type="int">
+            <column name="anum_bol"/>
+        </property>
+    </class>
+</hibernate-mapping>

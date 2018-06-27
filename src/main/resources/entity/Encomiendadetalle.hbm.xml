@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 05-jun-2017 19:51:57 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.Encomiendadetalle" table="encomiendadetalle" catalog="cincotours" optimistic-lock="version">
+        <id name="idEncd" type="java.lang.Integer">
+            <column name="id_encd" />
+            <generator class="identity" />
+        </id>
+        <!--<many-to-one name="encomienda" class="entity.Encomienda" fetch="select">
+            <column name="id_enc" not-null="true" />
+        </many-to-one>-->
+        <property name="descEnc" type="string">
+            <column name="desc_enc" length="100" not-null="true" />
+        </property>
+        <property name="precEnc" type="big_decimal">
+            <column name="prec_enc" precision="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
